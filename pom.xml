@@ -53,6 +53,18 @@
             <artifactId>guava</artifactId>
             <version>30.1-jre</version>
         </dependency>
+        <!-- SLF4J日志核心依赖 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <!-- Logback实现（Spring Boot默认） -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.11</version>
+        </dependency>
     </dependencies>
 
     <build>
