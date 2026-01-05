@@ -45,7 +45,7 @@
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j</artifactId>
-            <version>0.26.0</version>
+            <version>0.35.0</version>
         </dependency>
         <!-- 线程安全集合/工具类 -->
         <dependency>

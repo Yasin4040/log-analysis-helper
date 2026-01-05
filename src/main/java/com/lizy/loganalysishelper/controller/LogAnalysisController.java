@@ -17,18 +17,15 @@ public class LogAnalysisController {
     private QwenApiUtil qwenApiUtil;
 
     /**
-     * 智能日志分析接口
-     * 接口地址：http://localhost:8080/api/log/analyze
-     * 请求方式：POST
-     * 请求体：{"exceptionLog":"你的Java异常日志"}
+     * 智能日志分析接口（支持多轮对话）
+     * 请求体：{"exceptionLog":"日志内容", "sessionId":"会话ID"}
      */
     @PostMapping("/analyze")
     public LogAnalysisResponse analyzeLog(@RequestBody LogAnalysisRequest request) {
-        // 参数校验
         if (request.getExceptionLog() == null || request.getExceptionLog().trim().isEmpty()) {
             return LogAnalysisResponse.error(400, "异常日志不能为空");
         }
-        // 调用大模型分析日志
-        return qwenApiUtil.analyzeJavaLog(request.getExceptionLog());
+        // 传递sessionId支持多轮对话
+        return qwenApiUtil.analyzeJavaLog(request.getExceptionLog(), request.getSessionId());
     }
 }
