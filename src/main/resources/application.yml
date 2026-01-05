@@ -1,0 +1,8 @@
+server:
+  port: 8080  # 接口端口
+
+# 大模型配置（替换为你的信息，以通义千问为例）
+qwen:
+  api-key: sk-bf464410dbcb41cfb333e9b033720b9f
+  api-url: https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation
+  model: qwen-turbo
